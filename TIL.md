@@ -20,5 +20,5 @@
 
 ### 1.4 Functions part Two
 
-- naked
+- naked : 리턴값 지정안해도 됨..?
 - defer : 함수가 끝난 후의 추가 동작을 지정할 수 있음.
