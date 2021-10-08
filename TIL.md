@@ -9,8 +9,8 @@
 
 ### 1.2 Variables and Constants
 
-- var name string = "lemma" 이거랑
-- name := "lemma" 이건 같은거 / 이렇게 코드를 축약해서 사용하면 첫번째 값을 기준으로 타입을 알아서 찾아줌, 단 타입을 임의로 변경할 수 없음.
+- var name string = "madang" 이거랑
+- name := "madang" 이건 같은거 / 이렇게 코드를 축약해서 사용하면 첫번째 값을 기준으로 타입을 알아서 찾아줌, 단 타입을 임의로 변경할 수 없음.
 - 축약코드는 func밖에서 작동하지 않음, 변수에만 적용 가능함.
 
 ### 1.3 Functions part One

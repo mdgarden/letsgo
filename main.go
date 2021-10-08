@@ -1,7 +1,5 @@
 package main
 
-import "fmt"
-
 func canIDrink(age int) bool {
 
 	switch koreanAge := age + 2; koreanAge {
@@ -16,5 +14,5 @@ func canIDrink(age int) bool {
 
 
 func main()	{
-	fmt.Println(canIDrink(16))
+	superAdd(1,2,3,4,5,6)
 }
