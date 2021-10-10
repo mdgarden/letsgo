@@ -54,3 +54,22 @@ func superAdd(numbers ...int) int {
 	}
 	return total
 }
+
+/* If문 */
+
+
+func canIdrink(age int) bool {
+// case 1. if 사용
+// Go에서는 조건(condition)을 체크하기 전에 변수를 만들 수 있음
+	if koreanAge := age + 2; koreanAge < 18 {
+		return false
+	} 
+	switch koreanAge := age + 2; koreanAge {
+		case 10:
+			return false
+		case 18:
+			return true
+	}
+
+	return true
+}
