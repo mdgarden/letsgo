@@ -55,7 +55,7 @@ func superAdd(numbers ...int) int {
 	return total
 }
 
-/* If문 */
+/* if문 */
 
 
 func canIdrink(age int) bool {
@@ -64,6 +64,7 @@ func canIdrink(age int) bool {
 	if koreanAge := age + 2; koreanAge < 18 {
 		return false
 	} 
+	// switch문에서도 if문과 같이 변수를 만들고 사용할 수 있다
 	switch koreanAge := age + 2; koreanAge {
 		case 10:
 			return false
