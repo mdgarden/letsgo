@@ -74,3 +74,16 @@ func canIdrink(age int) bool {
 
 	return true
 }
+
+func pointers()	{
+	a := 2
+	//a의 값인 2가 아닌 a의 메모리 주소를 복사하겠다는 뜻
+	//&는 주소
+	b := &a
+	fmt.Println(&a, b)
+	//*는 살펴본다는 뜻
+	fmt.Println(*b)
+	// 출력값:2 = b는 a의 메모리주소 값을 가지고 있고 그 주소값의 할당치를 보여줌
+	*b = 20
+	// a의 값을 변경시킴
+}
