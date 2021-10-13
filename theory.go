@@ -87,3 +87,24 @@ func pointers()	{
 	*b = 20
 	// a의 값을 변경시킴
 }
+
+func arrAndSlice() {
+	names := [5]string{"wraith", "wattson", "crypto"}
+	names [3] = "pathfinder"
+	names [4] = "pathfinder"
+	/* 여기서 에러 발생 : names라는 배열은 5칸으로 정의되어있는데 6번째 자리에
+	더 넣을려고 하기 때문에 
+	names [5] = "pathfinder"
+	길이가 없는 배열을 쓰고 싶을 때 slice사용 / length만 비워두면 됨 */
+	legends := []string{"wraith", "wattson", "crypto"}
+
+	/* 근데 여기서 93번째 줄같이 쓰면 에러남.
+	추가하려면 아래와 같이 작성
+	append는 두개의 인자를 요구함. 하나는 slice, 두번째는 값
+	append(legends, "pathfinder")
+	append는 legends 슬라이스 자체를 수정해주는 것이 아니라 새 값이 추가된 새 슬라이스를 return함
+	따라서 legends라는 slice 자체를 수정하려면 다음과 같이 작성*/
+
+	legends = append(legends, "pathfinder")
+	fmt.Println(legends)
+}
