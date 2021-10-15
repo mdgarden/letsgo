@@ -108,3 +108,13 @@ func arrAndSlice() {
 	legends = append(legends, "pathfinder")
 	fmt.Println(legends)
 }
+
+func Maps() {
+	// map에는 key와 value가 있음
+	wraith := map[string]string{"name":"Renee", "age":"32"}
+	fmt.Println(wraith)
+	for key, value := range wraith {
+		fmt.Println(key)
+		fmt.Println(value)
+	}
+}
