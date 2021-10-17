@@ -119,3 +119,5 @@ func Maps() {
 	}
 	// TODO: map에 요소 추가하는 법
 }
+
+// Structs : Object와 비슷하면서 map보다 유연한 것이 특징
