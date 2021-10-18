@@ -91,10 +91,10 @@ func pointers()	{
 func arrAndSlice() {
 	names := [5]string{"wraith", "wattson", "crypto"}
 	names [3] = "pathfinder"
-	names [4] = "pathfinder"
+	names [4] = "lifeline"
 	/* 여기서 에러 발생 : names라는 배열은 5칸으로 정의되어있는데 6번째 자리에
 	더 넣을려고 하기 때문에 
-	names [5] = "pathfinder"
+	names [6] = "pathfinder"
 	길이가 없는 배열을 쓰고 싶을 때 slice사용 / length만 비워두면 됨 */
 	legends := []string{"wraith", "wattson", "crypto"}
 
@@ -111,7 +111,7 @@ func arrAndSlice() {
 
 func Maps() {
 	// map에는 key와 value가 있음
-	wraith := map[string]string{"name":"Renee", "age":"32"}
+	wraith := map[string]string{"name":"Renee Blasey", "age":"32"}
 	fmt.Println(wraith)
 	for key, value := range wraith {
 		fmt.Println(key)
@@ -120,4 +120,31 @@ func Maps() {
 	// TODO: map에 요소 추가하는 법
 }
 
-// Structs : Object와 비슷하면서 map보다 유연한 것이 특징
+/*
+Structs : Object와 비슷하면서 map보다 유연한 것
+JavaScript의 오브젝트 같은 느낌으로 쓰고 싶을 때
+원래는 파일 가장 위-import 아래에 작성하는 것이 일반적
+Go에는 constructor method가 없음
+파이썬의 __init__이나 JavaScript의 constructor()같은거
+*/
+
+type legend struct {
+	name string
+	age int
+	affiliations []string
+}
+
+// 실제 사용
+func inputStruct(){
+	// case 1 : struct 순서대로 입력 = key/value를 동시에 확인하기가 어렵고 코드가 깔끔해보이지않음
+	affiliations := []string{"IMC", "The Syndicate"}
+	wraith := legend{"Renee Blasey", 32,  affiliations}
+	fmt.Println(wraith)
+
+	// case 2
+	wattson := legend{name:"Natalie Paquette", age:22, affiliations: affiliations}
+	fmt.Println(wattson.name)
+
+	// field:value로 작성 시작했으면 그 내용은 전부 field:value로 맞춰야함
+}
+
