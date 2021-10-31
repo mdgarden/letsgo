@@ -12,17 +12,15 @@ import (
 func lenAndUpper(name string) (length int, uppercase string) {
     length = len(name)
 	uppercase = strings.ToUpper(name)
-	return
-	/* 따라서 여기서 return length, uppercase 라고 작성하지 않아도 
-	알아서 length와 uppercase가 업데이트 된다는 뜻
-	물론 무엇인가는 return 되어야함 */
+	return // ここで return length, uppercaseと書かなくてもいい
+	/* 変数のタイプ表記を省略しただけ。return値は必須。*/
 }
 
 //defer
 func lenAndUpperDefer(name string) (length int, uppercase string) {
-	//defer라고 적으면 return이 된 후에(function이 끝나고 나서) 실행됨
+	//deferはreturnの後に(functionが終わってから)実行される
 	defer fmt.Println("I'm done")
-	//활용용도:특정 API를 불러온다거나, 이미지를 불러온다거나, 창을 닫는다던가...
+	//活用例：特定APIを呼ぶ、ブラウザーを閉じるなどなど
     length = len(name)
 	uppercase = strings.ToUpper(name)
 	return
