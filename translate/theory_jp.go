@@ -29,13 +29,15 @@ func lenAndUpperDefer(name string) (length int, uppercase string) {
 
 /* for, range, ...args */
 
-//Go에서 반복문은 for만 이용가능함
-//forEach, for in 그런거 없음
+// Goでループはforだけ
+// forEach, for in などはない
 func superAdd(numbers ...int) int {
 	total := 0
-	/* range : array에 loop를 적용할 수 있도록 해줌
-	range는 index를 주기 때문에 0부터 시작함!!
-	index가 필요 없는 경우는 다음과 같이 언더바로 기술 */
+
+	/* range : arrayへループを適用できるようにする
+	rangeはindexをくれるので0から始まる
+	indexがいらない場合、次のように_で記述
+	*/
 
 	// for _, number := range ...
 	for index, number := range numbers {
@@ -45,7 +47,7 @@ func superAdd(numbers ...int) int {
 		//2, 3 ...
 		total += number
 	}
-	// 요렇게도 가능함
+	// この方法でも記述可能
 	for  i:=0; i < len(numbers); i++ {
 		fmt.Println(numbers[i])
 		//1,2,3,4...
@@ -53,7 +55,7 @@ func superAdd(numbers ...int) int {
 	return total
 }
 
-/* if문 */
+/* if文 */
 
 
 func canIdrink(age int) bool {
