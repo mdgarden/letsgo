@@ -57,14 +57,13 @@ func superAdd(numbers ...int) int {
 
 /* if文 */
 
-
 func canIdrink(age int) bool {
-// case 1. if 사용
-// Go에서는 조건(condition)을 체크하기 전에 변수를 만들 수 있음
+// case 1. if 使用
+// Goでは条件文(condition)をチェックする前に変数を作ることが可能
 	if koreanAge := age + 2; koreanAge < 18 {
 		return false
 	} 
-	// switch문에서도 if문과 같이 변수를 만들고 사용할 수 있다
+	// switch分でもif分と同じく変数を作って使用できる
 	switch koreanAge := age + 2; koreanAge {
 		case 10:
 			return false
@@ -77,36 +76,33 @@ func canIdrink(age int) bool {
 
 func pointers()	{
 	a := 2
-	//a의 값인 2가 아닌 a의 메모리 주소를 복사하겠다는 뜻
-	//&는 주소
+	// aの値：2ではなくaのメモリーアドレスをコピーする
+	// &はアドレスを意味
 	b := &a
 	fmt.Println(&a, b)
-	//*는 살펴본다는 뜻
+	//*は観察（？）の意味
 	fmt.Println(*b)
-	// 출력값:2 = b는 a의 메모리주소 값을 가지고 있고 그 주소값의 할당치를 보여줌
-	*b = 20
-	// a의 값을 변경시킴
+	// 出力値：2＝bはaのメモリアドレス値を持っていて、そのアドレス値を見せる
+
+	*b = 20 // aの値を変更
 }
 
 func arrAndSlice() {
-	names := [5]string{"wraith", "wattson", "crypto"}
-	names [3] = "pathfinder"
-	names [4] = "lifeline"
-	/* 여기서 에러 발생 : names라는 배열은 5칸으로 정의되어있는데 6번째 자리에
-	더 넣을려고 하기 때문에 
-	names [6] = "pathfinder"
-	길이가 없는 배열을 쓰고 싶을 때 slice사용 / length만 비워두면 됨 */
-	legends := []string{"wraith", "wattson", "crypto"}
+	names := [5]string{"john", "bob", "james"}
+	names [3] = "billy"
+	names [4] = "jane"
+	names [6] = "emma" // エラー理由：namesという配列は[5]まで定義されているので、それ以上で入れるのはだめ
 
-	/* 근데 여기서 93번째 줄같이 쓰면 에러남.
-	추가하려면 아래와 같이 작성
-	append는 두개의 인자를 요구함. 하나는 slice, 두번째는 값
-	append(legends, "pathfinder")
-	append는 legends 슬라이스 자체를 수정해주는 것이 아니라 새 값이 추가된 새 슬라이스를 return함
-	따라서 legends라는 slice 자체를 수정하려면 다음과 같이 작성*/
+	// 長さ関係なく配列を使いたい時はslice使用 / length値を空にすればOK
+	names_second := []string{"john", "bob", "james"}
 
-	legends = append(legends, "pathfinder")
-	fmt.Println(legends)
+	/* appendは二つの引数が必要。一つはappendするslice, もう一つはappendする値
+	例）append(names, "harry")
+	appendはnamesを修正するのではなく、新しい値が追加された新しいsliceをreturnする
+	namesというslice自体を修正するためには以下の書き方で記述する。
+	*/
+	names_second = append(names_second, "jane")
+	fmt.Println(names_second)
 }
 
 func Maps() {
