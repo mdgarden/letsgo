@@ -106,14 +106,14 @@ func arrAndSlice() {
 }
 
 func Maps() {
-	// map에는 key와 value가 있음
+	// mapにはkeyとvalueがある
 	wraith := map[string]string{"name":"Renee Blasey", "age":"32"}
 	fmt.Println(wraith)
 	for key, value := range wraith {
 		fmt.Println(key)
 		fmt.Println(value)
 	}
-	// TODO: map에 요소 추가하는 법
+	// TODO: mapに値追加する方法
 }
 
 /*
@@ -122,6 +122,13 @@ JavaScript의 오브젝트 같은 느낌으로 쓰고 싶을 때
 원래는 파일 가장 위-import 아래에 작성하는 것이 일반적
 Go에는 constructor method가 없음
 파이썬의 __init__이나 JavaScript의 constructor()같은거
+*/
+
+/*
+Structs : Objectと似てる＋mapより柔軟
+JavaScriptのオブジェクトみたいな感じで使いたい時
+本来ならばファイルの一番上-importの下-に記述するのが一般的
+Goにはconstructor methodがない(pythonの__init__やJavaScriptのconstructor()みたいな)
 */
 
 type legend struct {
