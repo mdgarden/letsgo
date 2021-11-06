@@ -137,9 +137,9 @@ type legend struct {
 	affiliations []string
 }
 
-// 실제 사용
+// 実際使用
 func inputStruct(){
-	// case 1 : struct 순서대로 입력 = key/value를 동시에 확인하기가 어렵고 코드가 깔끔해보이지않음
+	// case 1 : struct 順番通り入力 = key/valueを同時に確認するのが難しい、コードが綺麗に見えない
 	affiliations := []string{"IMC", "The Syndicate"}
 	wraith := legend{"Renee Blasey", 32,  affiliations}
 	fmt.Println(wraith)
@@ -148,6 +148,6 @@ func inputStruct(){
 	wattson := legend{name:"Natalie Paquette", age:22, affiliations: affiliations}
 	fmt.Println(wattson.name)
 
-	// field:value로 작성 시작했으면 그 내용은 전부 field:value로 맞춰야함
+	// field:valueで記述を始めたならその内容は全部field:valueで合わせる
 }
 
